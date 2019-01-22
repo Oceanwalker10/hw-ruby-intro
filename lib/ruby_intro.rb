@@ -12,7 +12,16 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  # YOUR CODE
+  #arr.sort[-2..-1].inject(:+)
+  if arr.empty?
+      return 0
+  elsif arr.length == 1
+      return arr[0]
+  else
+      return arr.sort[-2..-1].inject(:+)
+  end
+  
 end
 
 def sum_to_n? arr, n
