@@ -23,7 +23,7 @@ def max_2_sum(arr)
 end
 
 def sum_to_n?(arr, n)
-  if arr.permutation(2).any? { |a, b| a + b == n }
+  if arr.permutation(2).any? do |a, b| a + b == n end
       return true
   else
       return false
@@ -34,11 +34,11 @@ end
 # Part 2
 
 def hello(name)
-   "Hello, " + name
+  "Hello, " + name
 end
 
-def starts_with_consonant? s
-  # YOUR CODE HERE
+def starts_with_consonant?(s)
+  s =~ /\A(?=[^aeiou])(?=[a-z])/i
 end
 
 def binary_multiple_of_4? s
