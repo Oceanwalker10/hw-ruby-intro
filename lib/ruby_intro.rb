@@ -41,8 +41,15 @@ def starts_with_consonant?(s)
   s =~ /\A(?=[^aeiou])(?=[a-z])/i
 end
 
-def binary_multiple_of_4? s
-  # YOUR CODE HERE
+def binary_multiple_of_4?(s)
+   binary = s.to_i(2)
+   if s =~ /^[0-1]+$/
+       if (binary % 4 == 0)
+           return true
+       else
+           return false
+       end
+    end
 end
 
 # Part 3
