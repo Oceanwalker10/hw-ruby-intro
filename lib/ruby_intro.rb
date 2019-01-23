@@ -2,18 +2,16 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
-  @total = 0
-  arr.each do
-      |x| @total += x
+def sum(arr)
+  total = 0
+  arr.each do |x| 
+      total += x
   end
-  return @total
+  return total
+    
 end
 
-def max_2_sum arr
-  # YOUR CODE
-  #arr.sort[-2..-1].inject(:+)
+def max_2_sum(arr)
   if arr.empty?
       return 0
   elsif arr.length == 1
@@ -24,8 +22,13 @@ def max_2_sum arr
   
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n?(arr, n)
+  if arr.permutation(2).any? { |a, b| a + b == n }
+      return true
+  else
+      return false
+  end
+  
 end
 
 # Part 2
